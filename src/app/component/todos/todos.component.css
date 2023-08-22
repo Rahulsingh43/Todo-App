@@ -1,0 +1,56 @@
+.box{
+    background-color: #ffffff;
+    max-width: 230px;
+    min-width: 230px;
+    min-height: 230px;
+    max-height: 230px;
+    padding: 10px;
+    border: none;
+    box-shadow: 11px 13px 12px rgba(0, 0, 0, 0.151);
+}
+.title{
+    color: rgb(8, 8, 118);
+}
+.box:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.button-add{
+    background: linear-gradient(135deg, blue, violet);
+    outline: none;
+    border: none;
+}
+.button-delete{
+    background: linear-gradient(135deg, rgb(255, 0, 106), rgb(200, 74, 57));
+    outline: none;
+    border: none;
+}
+
+.fa-solid{
+    cursor: pointer;
+    color: rgb(199, 9, 37);
+}
+
+.content{
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: justify;
+    scrollbar-width: thin;
+    scrollbar-color: #635a5a #aba2a2;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+
+.content::-webkit-scrollbar{
+    width: 1px;
+}
+
+.content::-webkit-scrollbar-track{
+    background-color: #676161;
+}
+
+.content::-webkit-scrollbar-thumb{
+    background-color: #413a3a;
+}

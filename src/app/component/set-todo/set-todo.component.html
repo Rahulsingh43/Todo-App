@@ -1,0 +1,46 @@
+
+
+<div class="text-center  mt-2">
+    <h3 class="header mt-3">My Todos </h3>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border border-bottom-0">
+                <h1 class="modal-title fs-5 text-center header-col" id="exampleModalLabel">Add Todos</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-content">
+                <div class="modal-body ">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+                                <div class="row mb-3">
+                                    <div class="col mb-3">
+                                        <input type="text" id="title" class="form-control custom-input"
+                                            placeholder="Enter title" name="title" ngModel #fname="ngModel" required>
+                                    </div>
+
+                                </div>
+                                <div class="">
+                                    <div class="name right">
+                                        <textarea name="content" id="content" class="form-control custom-input" ngModel
+                                            #content="ngModel" placeholder="write your todos here..." cols="40"
+                                            rows="6"></textarea>
+                                    </div>
+                                    <div class="modal-footer mt-3">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success"
+                                            data-bs-dismiss="modal">Save</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

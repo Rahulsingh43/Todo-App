@@ -1,0 +1,29 @@
+<app-set-todo (forminfo)="collectData($event)"></app-set-todo>
+
+<div class="button d-flex my-5 justify-content-center align-items-center">
+    <button type="button" class="btn btn-danger button-add p-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Add Todos
+    </button>
+    <button class="btn btn-success button-delete p-3 mx-3" (click)="deleteAll()">Delete All</button>
+</div>
+
+
+    <div class="row">
+        <ng-container *ngIf="myData">
+            <ng-container *ngFor="let x of myData, let i=index">
+                <div
+                    class="col-lg-3 col-md-4 col-sm-6 d-flex flex-column justify-content-between box ms-4 my-3 rounded">
+                    <div class="content">
+                        <h4 class="text-center title">{{x.title}} </h4>
+                        <p class="text-left content-info">{{x.content}}</p>
+                    </div>
+                    <div class=" border-top border-dark d-flex justify-content-end">
+                  
+                        <div class="myBtn">
+                            <i (click)="deleteData(i)" class="fa-solid fa-trash mt-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </ng-container>
+    </div>
